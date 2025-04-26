@@ -1,0 +1,431 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    border: none;
+}
+
+body{
+    height: 100vh;
+    font-size: clamp(1rem, -2rem + 3.333vw, 2rem);
+    background-image: url(../img/i.webp);
+ background-size: cover;
+ background-repeat: no-repeat;
+ display: flex;
+ justify-content: center;
+align-items: center;
+color: rgb(250 219 131);
+overflow: hidden;
+}
+a{
+    text-decoration: none;
+    color: rgb(250 219 131);
+}
+.container{
+position: absolute;
+width: clamp(34rem, -14rem + 53.333vw, 50rem);
+
+}
+
+
+.create-profil,
+.create-entry{
+padding: 2%;
+backdrop-filter: blur(30px);
+border-radius: 20px;
+}
+
+.name-form{
+    margin-bottom: 2%;
+    text-align: center;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input {
+    margin-bottom: 3%;
+    padding: 2% 0 2% 7%;
+    width: 80% ;
+    border-radius: 20px;
+    border: 3px solid rgb(3, 128, 44);
+    font-size: clamp(1rem, -2rem + 3.333vw, 2rem);
+    transition: all 0.2s;
+}
+
+
+form input[type=checkbox]{
+    margin: 0;
+    padding: 0;
+    width: auto;
+}
+
+input::placeholder{
+
+    font-size: clamp(1rem, -2rem + 3.333vw, 2rem);
+padding-left: 10%;
+
+line-height: 40px;
+
+}
+
+
+
+.name{
+    background-image: url(../img/avatar.png);
+
+padding: 2% 0 2% 7%;
+background-size: clamp(1rem, -2rem + 3.333vw, 2rem) ;
+background-repeat: no-repeat;
+background-position: 2% 50%;
+padding: 2% 0 2% 7%;
+
+}
+
+.email{
+    background-image: url(../img/mail.png);
+    background-size: clamp(1rem, -2rem + 3.333vw, 2rem) ;
+    background-repeat: no-repeat;
+    background-position: 2% 50%;
+    padding: 2% 0 2% 7%;
+}
+
+.password{
+    background-image: url(../img/kisspng-computer-icons-lock-5af2d7b94ce642.375624141525864377315.jpg);
+    background-size: clamp(1rem, -2rem + 3.333vw, 2rem) ;
+    background-repeat: no-repeat;
+    background-position: 2% 50%;
+    padding: 2% 0 2% 7%;
+
+}
+input:focus{
+    transform: scale(1.1);
+    border: 3px solid rgb(0, 77, 26);
+    background-image: none;
+   
+
+}
+
+input:active{
+    transform: scale(1.1);
+    border: 3px solid rgb(0, 77, 26);
+    background-color: azure;
+   
+}
+
+
+.create-entry{
+    display: none;
+}
+
+#change{
+    appearance: none;
+    opacity: 0;
+}
+
+#change:checked ~ .create-profil{
+    display: none;
+    
+}
+
+#change:checked ~ .create-entry{
+    display: block;
+   
+}
+
+
+
+
+.fuction{
+   text-align: center;
+   color: rgb(250 219 131);
+   margin-top: 0 auto;
+  margin: 4% 10%;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}  
+.label:hover{
+    color: rgb(255, 206, 70);
+    transform: scale(1.1);
+   
+}
+
+
+
+.social{
+    margin: 3% 0;
+    display: flex;
+   justify-content: space-evenly;
+   font-size: clamp(1.5rem, -3rem + 5vw, 3rem);
+}
+
+
+#ch{
+display: none;
+}
+
+.act{
+    width: 80%;
+    margin-left: 15%;
+}
+
+.false-box{
+    border: 2px solid rgb(250 219 131);
+    position: absolute;
+    width: clamp(1rem, -2rem + 3.333vw, 2rem);
+    height: clamp(1rem, -2rem + 3.333vw, 2rem);
+   left: 13%;
+   
+    
+}
+
+.checkbox:checked + .false-box{
+    background-image: url(../img/160-1602919_purple-junimo-stardew-valley-junimo-clipart\ \(1\).png);
+    background-size: cover;
+    background-position: center center;
+}
+
+.img1,
+.img2,
+.img3
+{
+    position: absolute;
+    bottom: 1%;
+    width: 10%;
+    height:12%;
+    z-index: 10;
+  
+   
+}
+
+.img1{
+    left: 1%;
+    animation: stars3 2s linear forwards;
+}
+
+
+.img2{
+    right: 1%;
+    animation: stars1 2s linear forwards;
+    
+}
+
+.img3{
+    top: 1%;
+    animation: stars2 2s  linear forwards;
+}
+
+
+
+
+
+@keyframes stars1{
+    0%{
+        transform: translate(4%, -100% );
+    }
+    15%{
+        transform: translate(8%, -200%);
+    }
+    30%{
+        transform: translate(16%, -300%);
+    }
+    45%{
+        transform: translate(24%, -400% );
+    }
+
+    65%{transform: translate(32%, -500%) ;}
+    
+
+    75%{
+        transform: translate(40%, -600%);
+    }
+    90%{
+        transform: translate(48%, -700%);
+    }
+    100%{
+        transform: translate(60%, -720%);
+       
+    }
+
+}
+
+@keyframes stars3{
+    0%{
+        transform: translate(-4%, -100% );
+    }
+    15%{
+        transform: translate(-8%, -200%);
+    }
+    30%{
+        transform: translate(-16%, -300%);
+    }
+    45%{
+        transform: translate(-24%, -400% );
+    }
+
+    65%{transform: translate(-32%, -500%) ;}
+    
+
+    75%{
+        transform: translate(-40%, -600%);
+    }
+    90%{
+        transform: translate(-48%, -700%);
+    }
+    100%{
+        transform: translate(-60%, -720%);
+       
+    }
+
+}
+@keyframes stars2{
+    0%{
+        transform: translateY( 20%);
+        display: block;
+        
+    }
+    5%{
+        transform: translateY( 20%);
+        
+    }
+    10%{
+        transform: translateY( 20%);
+        
+    }
+    15%{
+        transform: translateY( 20%);
+        
+    }
+    20%{
+        transform: translateY( 20%);
+        
+    }
+    25%{
+        transform: translateY( 20%);
+        
+    }
+  
+    
+    30%{
+        transform: translateY( 100%);
+   
+    }
+    45%{
+        transform: translateY( 250%);
+    }
+    60%{
+        transform: translateY( 400%);
+    }
+
+    75%{
+        transform: translateY( 600%);
+    }
+    90%{
+        transform: translateY( 700%);
+    }
+    100%{
+        transform: translateY( 760%);
+       
+    }
+}
+
+
+
+
+@media (max-width:780px){
+
+    body{
+        background-position: center center;
+    }
+    .container{
+    width: clamp(20rem, 1.026rem + 82.051vw, 40rem);
+    }
+    
+    
+   
+
+    
+    .false-box{
+       left: 8%;
+    }
+   
+    .fuction{
+      font-size:1.4rem;
+    }  
+    
+    
+    
+    form input {
+        width: 90% ;
+    }
+    
+    .act{
+        width: 90%;
+    }
+    
+    .img1,
+    .img2,
+    .img3
+    {
+        height:8%;
+    }
+
+
+    @keyframes stars2{
+        0%{
+            transform: translateY( 20%);
+            display: block;
+            
+        }
+        5%{
+            transform: translateY( 20%);
+            
+        }
+        10%{
+            transform: translateY( 20%);
+            
+        }
+        15%{
+            transform: translateY( 20%);
+            
+        }
+        20%{
+            transform: translateY( 20%);
+            
+        }
+        25%{
+            transform: translateY( 20%);
+            
+        }
+      
+        
+        30%{
+            transform: translateY( 100%);
+       
+        }
+        45%{
+            transform: translateY( 250%);
+        }
+        60%{
+            transform: translateY( 400%);
+        }
+    
+        75%{
+            transform: translateY( 600%);
+        }
+        90%{
+            transform: translateY( 800%);
+        }
+        100%{
+            transform: translateY( 900%);
+           
+        }
+    }
+    
+}
