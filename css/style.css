@@ -420,10 +420,10 @@ display: none;
             transform: translateY( 600%);
         }
         90%{
-            transform: translateY( 800%);
+            transform: translateY( 850%);
         }
         100%{
-            transform: translateY( 900%);
+            transform: translateY( 1000%);
            
         }
     }
