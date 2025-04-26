@@ -424,6 +424,7 @@ display: none;
         }
         100%{
             transform: translateY( 1000%);
+            display:none;
            
         }
     }
